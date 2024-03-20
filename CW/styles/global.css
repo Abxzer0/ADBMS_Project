@@ -1,0 +1,15 @@
+﻿html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidenav {
+    min-height: 100vh;
+    position: sticky;
+}
+
+.table-dd {
+    outline: none;
+    border: none;
+    background: transparent;
+}

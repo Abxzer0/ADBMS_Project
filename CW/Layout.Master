@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="CW.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="styles/global.css" rel="stylesheet" />
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <style type="text/css">
+        .ddl {
+            outline: none;
+            border: none;
+            background: transparent;
+            appearance: none;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="d-flex">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh; position: sticky; top: 0">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">E-Course</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/dashboard.aspx" class="nav-link <%= IsActive("/dashboard.aspx") %>" aria-current="page">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#home" />
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/student.aspx" class="nav-link <%= IsActive("/student.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#speedometer2" />
+                            </svg>
+                            Student
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/instructor.aspx" class="nav-link <%= IsActive("/instructor.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#table" />
+                            </svg>
+                            Instructor
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/course.aspx" class="nav-link <%= IsActive("/course.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#grid" />
+                            </svg>
+                            Course
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/enrollment_details.aspx" class="nav-link <%= IsActive("/enrollment_details.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#grid" />
+                            </svg>
+                            Enrollment Details
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/lesson.aspx" class="nav-link <%= IsActive("/lesson.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#people-circle" />
+                            </svg>
+                            Lesson
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/assignment.aspx" class="nav-link <%= IsActive("/assignment.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#people-circle" />
+                            </svg>
+                            Instructor Assignment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/progress.aspx" class="nav-link <%= IsActive("/progress.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#people-circle" />
+                            </svg>
+                            Progress
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/best_course.aspx" class="nav-link <%= IsActive("/best_course.aspx") %>">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#people-circle" />
+                            </svg>
+                            Best Course
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+            <div class="container p-2" style="width: calc(100vw-280px)">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
